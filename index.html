@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075b2a">
+  <meta name="description" content="HopeBridge helps underserved individuals and small businesses build safer money habits and keep simple business records.">
+  <title>HopeBridge | MoneyBridge</title>
+  <link rel="icon" href="assets/hopebridge-logo.png">
+  <style>
+    :root{--green:#075b2a;--deep:#063d20;--gold:#e5b51b;--ink:#17231b;--muted:#647168;--paper:#f5f8f4;--white:#fff;--line:#e2e9e1;--red:#a93226}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--deep);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:2px solid var(--gold)}
+    nav{display:flex;gap:18px;align-items:center;font-size:.92rem}nav a{opacity:.9}nav a:hover{color:var(--gold)}
+    button,.btn{border:0;border-radius:10px;padding:11px 16px;background:var(--gold);color:#17210f;font-weight:800;cursor:pointer}.lang{background:#fff;color:var(--deep);padding:8px 12px}
+    .hero{background:linear-gradient(120deg,#063d20,#08783a);color:white;padding:56px 0 48px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center}.eyebrow{color:#ffe17a;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.78rem}
+    h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.08;margin:12px 0 16px}.hero p{font-size:1.08rem;max-width:650px;color:#e7f2e9}.hero-card{background:#fff;color:var(--ink);padding:20px;border-radius:22px;box-shadow:0 18px 50px #001b0c66}.hero-card img{width:100%;max-width:250px;display:block;margin:auto;border-radius:14px}.tag{display:inline-block;background:#eaf5ec;color:var(--green);padding:5px 10px;border-radius:99px;font-size:.8rem;font-weight:800;margin-top:12px}
+    section{padding:48px 0}.section-head{max-width:720px;margin-bottom:24px}.section-head h2{font-size:clamp(1.6rem,4vw,2.3rem);margin:0 0 8px;color:var(--deep)}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 6px 18px #0b3a1710}.icon{font-size:1.7rem}.card h3{margin:8px 0;color:var(--deep)}.muted{color:var(--muted)}
+    .tools{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 6px 18px #0b3a1710}.panel h3{margin-top:0;color:var(--deep)}
+    label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 5px}input,select{width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:9px;font:inherit;background:#fff}
+    .formrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.full{width:100%;margin-top:14px;background:var(--green);color:white}
+    .stat{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}.stat strong{font-size:1.1rem}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:12px}th,td{text-align:left;padding:9px;border-bottom:1px solid var(--line)}th{color:var(--deep)}
+    .notice{background:#fff8df;border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;color:#5c4a11;font-size:.9rem;margin-top:14px}
+    .mission{background:#eaf3eb}.pill{display:inline-block;border:1px solid #cfe0d1;border-radius:99px;padding:5px 10px;margin:4px;color:var(--green);font-size:.85rem;font-weight:700}
+    footer{background:#062f19;color:#dcebe0;padding:28px 0}footer small{color:#b7cabb}.footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .small{font-size:.82rem}.danger{background:#fff0ed;color:var(--red);padding:8px 12px;border-radius:8px}.empty{color:var(--muted);font-style:italic}
+    @media(max-width:760px){nav{display:none}.hero-grid,.tools{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero{padding:38px 0}.hero-card{max-width:360px}.formrow{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><img src="assets/hopebridge-logo.png" alt="HopeBridge logo"><span>HOPEBRIDGE<br><small style="font-weight:500">ALI AZZAHIRIY YOUTH INITIATIVE</small></span></a>
+  <nav><a href="#about" data-en="About" data-ha="Game da mu">About</a><a href="#tools" data-en="Money tools" data-ha="Kayan sarrafa kuɗi">Money tools</a><a href="#learn" data-en="Learn" data-ha="Koyo">Learn</a><a href="#contact" data-en="Contact" data-ha="Tuntuɓa">Contact</a></nav>
+  <button class="lang" id="langBtn" type="button">Hausa</button>
+</div></header>
+
+<main id="home">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow" data-en="Hope • Empower • Transform" data-ha="Fata • Ƙarfafawa • Sauyi">Hope • Empower • Transform</div>
+    <h1 data-en="Small steps towards stronger financial futures." data-ha="Ƙananan matakai zuwa ingantacciyar rayuwar kuɗi.">Small steps towards stronger financial futures.</h1>
+    <p data-en="MoneyBridge is a simple, mobile-friendly toolkit concept by Ali Azzahiriy HopeBridge Youth Initiative. It helps individuals and small businesses practise safer money habits, plan savings and keep basic daily records." data-ha="MoneyBridge wani sauƙaƙƙen kayan taimako ne na wayar hannu daga Ali Azzahiriy HopeBridge Youth Initiative. Yana taimaka wa mutane da ƙananan sana'o'i su kula da kuɗinsu cikin tsaro, tsara ajiya, da rubuta mu'amalolin yau da kullum.">MoneyBridge is a simple, mobile-friendly toolkit concept by Ali Azzahiriy HopeBridge Youth Initiative. It helps individuals and small businesses practise safer money habits, plan savings and keep basic daily records.</p>
+    <a class="btn" href="#tools" data-en="Try the money tools" data-ha="Gwada kayan sarrafa kuɗi">Try the money tools</a>
+    <span class="tag" data-en="Designed for low-data mobile use" data-ha="An tsara shi domin amfani da waya mai ƙarancin data">Designed for low-data mobile use</span>
+  </div>
+  <div class="hero-card"><img src="assets/hopebridge-logo.png" alt="Ali Azzahiriy HopeBridge Youth Initiative logo"><h3 style="text-align:center;margin:12px 0 2px">Together for a Better Society</h3><p class="muted small" style="text-align:center;margin:0" data-en="A community initiative led by young people." data-ha="Ƙungiyar al'umma da matasa ke jagoranta.">A community initiative led by young people.</p></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="section-head"><h2 data-en="About HopeBridge" data-ha="Game da HopeBridge">About HopeBridge</h2><p data-en="We aim to connect people with practical support, skills and opportunities for a more secure future." data-ha="Manufarmu ita ce haɗa mutane da taimako na zahiri, ƙwarewa da damammaki domin ingantacciyar rayuwa.">We aim to connect people with practical support, skills and opportunities for a more secure future.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">🤝</div><h3 data-en="Community support" data-ha="Taimakon al'umma">Community support</h3><p class="muted" data-en="Identify and support vulnerable people and families through responsible community action." data-ha="Gano da tallafa wa marasa ƙarfi da iyalai masu buƙata ta hanyar ayyukan al'umma masu alhaki.">Identify and support vulnerable people and families through responsible community action.</p></article>
+    <article class="card"><div class="icon">🧰</div><h3 data-en="Youth empowerment" data-ha="Ƙarfafa matasa">Youth empowerment</h3><p class="muted" data-en="Encourage practical skills, digital literacy and pathways to self-reliance." data-ha="Ƙarfafa sana'o'i, ilimin fasahar zamani da hanyoyin dogaro da kai.">Encourage practical skills, digital literacy and pathways to self-reliance.</p></article>
+    <article class="card"><div class="icon">🌱</div><h3 data-en="Opportunity bridge" data-ha="Gadar damammaki">Opportunity bridge</h3><p class="muted" data-en="Build partnerships that connect young people with training, work and support." data-ha="Gina haɗin gwiwa da zai haɗa matasa da horo, aiki da tallafi.">Build partnerships that connect young people with training, work and support.</p></article>
+  </div>
+</div></section>
+
+<section id="tools" class="mission"><div class="wrap">
+  <div class="section-head"><h2 data-en="MoneyBridge: simple business cashbook" data-ha="MoneyBridge: littafin lissafin sana'a mai sauƙi">MoneyBridge: simple business cashbook</h2><p data-en="Record daily sales, other income and expenses. Your entries stay in this browser on this device; they are not sent to a server." data-ha="Rubuta tallace-tallace, sauran kuɗin shiga da kashe-kashe na yau da kullum. Bayananka suna nan a browser ɗin wannan wayar; ba a aika su zuwa server ba.">Record daily sales, other income and expenses. Your entries stay in this browser on this device; they are not sent to a server.</p></div>
+  <div class="tools">
+    <div class="panel">
+      <h3 data-en="Add a transaction" data-ha="Ƙara mu'amalar kuɗi">Add a transaction</h3>
+      <form id="entryForm">
+        <label for="kind" data-en="Type" data-ha="Nau'i">Type</label><select id="kind"><option value="income" data-en="Income" data-ha="Kuɗin shiga">Income</option><option value="expense" data-en="Expense" data-ha="Kuɗin fita">Expense</option></select>
+        <div class="formrow"><div><label for="amount" data-en="Amount (₦)" data-ha="Adadi (₦)">Amount (₦)</label><input id="amount" type="number" min="1" step="1" required placeholder="e.g. 2500"></div><div><label for="date" data-en="Date" data-ha="Kwanan wata">Date</label><input id="date" type="date" required></div></div>
+        <label for="note" data-en="Description" data-ha="Bayani">Description</label><input id="note" maxlength="70" required placeholder="e.g. Rice sales / Transport">
+        <button class="full" type="submit" data-en="Save transaction" data-ha="Ajiye mu'amala">Save transaction</button>
+      </form>
+      <p class="notice" data-en="Demo prototype: do not enter bank details, passwords, BVN, NIN or private information about beneficiaries." data-ha="Gwaji ne na farko: kada ka shigar da bayanan banki, kalmomin sirri, BVN, NIN ko sirrin mutanen da kuke taimakawa.">Demo prototype: do not enter bank details, passwords, BVN, NIN or private information about beneficiaries.</p>
+    </div>
+    <div class="panel">
+      <h3 data-en="Your business snapshot" data-ha="Takaitaccen lissafin sana'arka">Your business snapshot</h3>
+      <div class="stat"><span data-en="Total income" data-ha="Jimillar kuɗin shiga">Total income</span><strong id="incomeTotal">₦0</strong></div>
+      <div class="stat"><span data-en="Total expenses" data-ha="Jimillar kashe-kashe">Total expenses</span><strong id="expenseTotal">₦0</strong></div>
+      <div class="stat"><span data-en="Balance" data-ha="Ragowar kuɗi">Balance</span><strong id="balanceTotal">₦0</strong></div>
+      <div class="stat"><span data-en="Savings goal (optional)" data-ha="Burinta na ajiya (na zaɓi)">Savings goal (optional)</span><strong id="goalDisplay">Not set</strong></div>
+      <label for="goal" data-en="Set a savings goal (₦)" data-ha="Sanya burin ajiya (₦)">Set a savings goal (₦)</label><input id="goal" type="number" min="0" placeholder="e.g. 50000">
+      <button class="full" id="saveGoal" type="button" data-en="Save goal" data-ha="Ajiye buri">Save goal</button>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:18px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h3 style="margin:0" data-en="Recent transactions" data-ha="Mu'amaloli na baya-bayan nan">Recent transactions</h3><button class="danger" id="clearData" type="button" data-en="Clear this device's demo data" data-ha="Goge bayanan gwaji na wannan waya">Clear this device's demo data</button></div>
+    <div class="tablewrap"><table><thead><tr><th data-en="Date" data-ha="Kwanan wata">Date</th><th data-en="Description" data-ha="Bayani">Description</th><th data-en="Type" data-ha="Nau'i">Type</th><th data-en="Amount" data-ha="Adadi">Amount</th></tr></thead><tbody id="entries"><tr><td colspan="4" class="empty" data-en="No transactions yet. Add your first entry above." data-ha="Babu mu'amala tukuna. Ƙara ta farko a sama.">No transactions yet. Add your first entry above.</td></tr></tbody></table></div>
+  </div>
+</div></section>
+
+<section id="learn"><div class="wrap">
+  <div class="section-head"><h2 data-en="Learn to protect and plan your money" data-ha="Koyi yadda za ka kare kuɗinka kuma ka tsara su">Learn to protect and plan your money</h2><p data-en="Short, practical reminders for households and small businesses." data-ha="Ƙananan shawarwari masu amfani ga iyalai da ƙananan sana'o'i.">Short, practical reminders for households and small businesses.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">🧾</div><h3 data-en="Keep records" data-ha="Riƙe lissafi">Keep records</h3><p class="muted" data-en="Write down every sale and expense, even small ones. Separate business money from personal spending where possible." data-ha="Rubuta kowace ciniki da kashe kuɗi, ko da kaɗan ne. Idan zai yiwu, ware kuɗin sana'a daga na kanka.">Write down every sale and expense, even small ones. Separate business money from personal spending where possible.</p></article>
+    <article class="card"><div class="icon">🔐</div><h3 data-en="Avoid fraud" data-ha="Guji zamba">Avoid fraud</h3><p class="muted" data-en="Never share your PIN, OTP or password. Verify offers through official websites and never pay an unknown person to secure a grant." data-ha="Kada ka taɓa ba kowa PIN, OTP ko kalmar sirri. Tabbatar da tallafi a shafin hukuma, kuma kada ka biya wanda ba ka sani ba wai domin ya samo maka tallafi.">Never share your PIN, OTP or password. Verify offers through official websites and never pay an unknown person to secure a grant.</p></article>
+    <article class="card"><div class="icon">🎯</div><h3 data-en="Plan savings" data-ha="Tsara ajiya">Plan savings</h3><p class="muted" data-en="Choose a realistic target, save regularly and review your progress. Do not borrow unless the repayment plan is clear." data-ha="Zaɓi burin da zai yiwu, ka riƙa ajiya a kai a kai, kana duba ci gabanka. Kada ka ci bashi sai ka fahimci yadda za ka biya.">Choose a realistic target, save regularly and review your progress. Do not borrow unless the repayment plan is clear.</p></article>
+  </div>
+</div></section>
+
+<section id="contact" class="mission"><div class="wrap">
+  <div class="section-head"><h2 data-en="Our leadership" data-ha="Jagorancinmu">Our leadership</h2><p data-en="Ali Azzahiriy HopeBridge Youth Initiative — Together for a Better Society." data-ha="Ali Azzahiriy HopeBridge Youth Initiative — Tare domin al'umma mafi inganci.">Ali Azzahiriy HopeBridge Youth Initiative — Together for a Better Society.</p></div>
+  <div class="panel"><h3>Aliyu Hussaini Azzahiriy</h3><p class="muted">Founder &amp; Coordinator</p><div class="pill">Hope</div><div class="pill">Empower</div><div class="pill">Transform</div><p class="small muted" data-en="Contact details will be added after the initiative confirms its official contact channels." data-ha="Za a ƙara hanyoyin tuntuɓa bayan ƙungiyar ta tabbatar da lambobi da shafukanta na hukuma.">Contact details will be added after the initiative confirms its official contact channels.</p></div>
+</div></section>
+</main>
+<footer><div class="wrap footerrow"><div><strong>ALI AZZAHIRIY HOPEBRIDGE YOUTH INITIATIVE</strong><br><small data-en="Together for a Better Society" data-ha="Tare domin al'umma mafi inganci">Together for a Better Society</small></div><small>© <span id="year"></span> HopeBridge. <span data-en="Prototype version" data-ha="Sigar gwaji">Prototype version</span>.</small></div></footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let lang = "en";
+let records = JSON.parse(localStorage.getItem("hb_records") || "[]");
+let goal = Number(localStorage.getItem("hb_goal") || 0);
+$("date").value = new Date().toISOString().slice(0,10);
+$("year").textContent = new Date().getFullYear();
+const money = n => "₦" + Number(n).toLocaleString("en-NG");
+function render(){
+  const income = records.filter(x=>x.kind==="income").reduce((a,x)=>a+x.amount,0);
+  const expense = records.filter(x=>x.kind==="expense").reduce((a,x)=>a+x.amount,0);
+  $("incomeTotal").textContent=money(income); $("expenseTotal").textContent=money(expense); $("balanceTotal").textContent=money(income-expense);
+  $("goalDisplay").textContent=goal?money(goal): (lang==="en"?"Not set":"Ba a saita ba");
+  $("goal").value=goal||"";
+  const body=$("entries"); body.innerHTML="";
+  if(!records.length){body.innerHTML=`<tr><td colspan="4" class="empty">${lang==="en"?"No transactions yet. Add your first entry above.":"Babu mu'amala tukuna. Ƙara ta farko a sama."}</td></tr>`;return;}
+  [...records].reverse().slice(0,30).forEach(x=>{const tr=document.createElement("tr");[x.date,x.note,lang==="en"?(x.kind==="income"?"Income":"Expense"):(x.kind==="income"?"Shiga":"Fita"),money(x.amount)].forEach(v=>{const td=document.createElement("td");td.textContent=v;tr.appendChild(td)});body.appendChild(tr)});
+}
+$("entryForm").addEventListener("submit",e=>{
+  e.preventDefault(); const amount=Number($("amount").value);
+  if(!Number.isFinite(amount)||amount<=0)return;
+  records.push({kind:$("kind").value,amount,date:$("date").value,note:$("note").value.trim()});
+  localStorage.setItem("hb_records",JSON.stringify(records)); $("amount").value=""; $("note").value=""; render();
+});
+$("saveGoal").addEventListener("click",()=>{goal=Math.max(0,Number($("goal").value)||0);localStorage.setItem("hb_goal",String(goal));render()});
+$("clearData").addEventListener("click",()=>{if(confirm(lang==="en"?"Delete all demo transactions and savings goal from this device?":"A goge duk mu'amalolin gwaji da burin ajiya daga wannan waya?")){records=[];goal=0;localStorage.removeItem("hb_records");localStorage.removeItem("hb_goal");render()}});
+function setLang(next){lang=next;document.documentElement.lang=lang;document.querySelectorAll("[data-en]").forEach(el=>{el.textContent=el.dataset[lang]});$("langBtn").textContent=lang==="en"?"Hausa":"English";render()}
+$("langBtn").addEventListener("click",()=>setLang(lang==="en"?"ha":"en"));
+render();
+</script>
+</body>
+</html>
